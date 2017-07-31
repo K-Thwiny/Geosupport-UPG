@@ -9,8 +9,6 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-
-  <script type="text/javascript" src="/js/main.js"></script>
   <title>APPENDIX 3: DATA ITEM DICTIONARY - DCP</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
@@ -29,6 +27,7 @@
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
   <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script src="../../js/main.js"></script>
   <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
   
 </head>
@@ -720,7 +719,7 @@
       <div class="wy-nav-content">
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
-  <span style="float: right;" class="printLogo"><a onclick="handlePrintPage()" class="printBtn">Print Page</a>  <a onclick="handlePrintAll()" class="printBtn">Print All</a></span>
+  <span style="float: right;" class="printLogo"><a onclick="handlePrintPage()" class="printBtn">Print Page</a>  <a href="../../upg.pdf" target="_blank" class="printBtn">Print All</a></span>
   <ul class="wy-breadcrumbs">
     <li><a href="../..">Docs</a> &raquo;</li>
     
@@ -5658,8 +5657,20 @@ each 7 bytes RJZF.</td>
                   <th><u>Meaning</u></th>
               </tr>
               <tr>
+                  <td>‘A’</td>
+                  <td>Address Place Name</td>
+              </tr>
+              <tr>
+                  <td>‘B’</td>
+                  <td>Name of bridge</td>
+              </tr>
+              <tr>
                   <td>‘C’</td>
                   <td>Building Improvement District (BID)</td>
+              </tr>
+              <tr>
+                  <td>‘D’</td>
+                  <td>Duplicate Address Pseudo-Street Name (DAPS)</td>
               </tr>
               <tr>
                   <td>‘E’</td>
@@ -5682,6 +5693,10 @@ each 7 bytes RJZF.</td>
                   <td>Intersection Name</td>
               </tr>
               <tr>
+                  <td>‘J’</td>
+                  <td>Non-physical Boundary Feature</td>
+              </tr>
+              <tr>
                   <td>‘M’</td>
                   <td>House numbers on input street are of mixed hyphenation, i.e., some are hyphenated and some are not.</td>
               </tr>
@@ -5690,12 +5705,37 @@ each 7 bytes RJZF.</td>
                   <td>Input street is a Non-Addressable Place Name (NAP)</td>
               </tr>
               <tr>
+                  <td>‘O’</td>
+                  <td>Shore Line</td>
+              </tr>
+              <tr>
+                  <td>‘P’</td>
+                  <td>Pseudo-street name</td>
+              </tr>
+              <tr>
+                  <td>‘R’</td>
+                  <td>Rail Line</td>
+              </tr>
+              <tr>
                   <td>‘S’</td>
                   <td>Front-Truncated Street Name</td>
+              </tr>
+
+              <tr>
+                  <td>‘T’</td>
+                  <td>Tunnel</td>
+              </tr>
+              <tr>
+                  <td>‘U’</td>
+                  <td>Misc. structure</td>
               </tr>
               <tr>
                   <td>‘X’</td>
                   <td>NAP Of a Constituent Entity of a Complex</td>
+              </tr>
+              <tr>
+                  <td>‘Z’</td>
+                  <td>Exit or Entrance Rampse</td>
               </tr>
               <tr>
                   <td>Blank</td>
