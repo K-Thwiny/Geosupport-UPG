@@ -88,6 +88,7 @@ blockquote, .pdfPre {
   page-break-before: always;
 }
 
+
 .longText {
   font-size: 30px;
 }
@@ -121,7 +122,7 @@ img[alt^="NYCSeal"] {
   float: right !important;
 }
 img[alt^="NYCPlanningLogo"] {
-  margin-top: 10.5em;
+  margin-top: 6.5em;
 }
 
 
@@ -212,6 +213,9 @@ img[alt^="GoatFunction_medium"] {
 .indentRows {
   padding-left: 40px !important;
 }
+.indentRowsofRows{
+  padding-left: 60px !important;
+}
 .centerRow {
   text-align: center;
 }
@@ -237,9 +241,6 @@ img[alt^="GoatFunction_medium"] {
 .subheading {
   font-size: 0.8cm !important;
 }
-
-
-
 /*.rst-content .section .docutils {
  overflow: visible !important;
 }*/
@@ -248,4 +249,12 @@ img[alt^="GoatFunction_medium"] {
 }
 .hljs-string, .hljs-tag .hljs-value, .hljs-phpdoc, .hljs-dartdoc, .tex .hljs-formula {
    color: black !important;
+}
+a:after {
+  content: "" !important;
+  /*background-color:inherit;*/
+  }
+a {
+  color: #0a0101 !important;
+  text-decoration: none !important;
 }

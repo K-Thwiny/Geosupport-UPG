@@ -138,6 +138,12 @@ function buttonClicked(e) {
 	if (p != undefined) {
 		var c = currentButtonSetup(e)
 	}
+	//HideTOC Page Numbers on Website
+	// Shouldnot be commented
+	if (e.currentTarget.innerText==="Table of Contents"){
+		hideNumbers();
+	}
+
 }
 //Give an onclick function to each li (which is each navigation button)
 function buttonClickedHandler() {
@@ -241,42 +247,21 @@ function resetNavOnSearch() {
 	}
 }
 function handlePrintPage() {
-		window.print();
+	window.print();
 }
-
-function closePrint () {
-  document.body.removeChild(this.__container__);
-}
-function setPrint () {
-  this.contentWindow.__container__ = this;
-  this.contentWindow.onbeforeunload = closePrint;
-  this.contentWindow.onafterprint = closePrint;
-  this.contentWindow.focus(); // Required for IE
-  this.contentWindow.print();
-}
-function printPage (sURL) {
-  var oHiddFrame = document.createElement("iframe");
-  oHiddFrame.onload = setPrint;
-  oHiddFrame.style.visibility = "hidden";
-  oHiddFrame.style.position = "fixed";
-  oHiddFrame.style.right = "0";
-  oHiddFrame.style.bottom = "0";
-  oHiddFrame.src = sURL;
-  document.body.appendChild(oHiddFrame);
-}
-function handlePrintAll() {
-	let pdfUrl = "/all.pdf";
-	printPage(pdfUrl);
-}
-
 //Sticky Heading
 
 function subNav() {
-	return document.querySelector(".current").querySelector(".current").querySelector(".current").querySelector(".subnav");
+//debugger
+	if (isCustomButton(getCurrentButton())) {
+		return document.querySelector(".current").querySelector(".current").querySelector(".current").querySelector(".subnav");
+	} else {
+		return document.querySelector(".current").querySelector(".current").lastElementChild;
+	}
 }
-function subnavOnClickHandler(item) {
-	console.log("The item is: ", this, item);
-}
+// function subnavOnClickHandler(item) {
+// 	console.log("The item is: ", this, item);
+// }
 var allCurrentPositions = {};
 
 function allHashes() {
@@ -352,6 +337,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	runNextButtonHandler();
 
 	//listen to previous button onclick
-	runPreviousButtonHandler()
+	runPreviousButtonHandler();
 
 });

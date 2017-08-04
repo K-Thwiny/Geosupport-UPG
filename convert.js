@@ -8,6 +8,7 @@ const duplexer = require("duplexer");
 
 
 const INDEX = "index.md";
+const TOC = "tableofcontents.md";
 const OVERVIEW = "overview.md";
 const ABOUT = "aboutUs.md";
 const CHAPTERS = "chapters";
@@ -44,17 +45,20 @@ function numberFiles(fileName) {
     case INDEX:
       printingOrderDictionary[1] = INDEX;
       break;
+    case TOC:
+        printingOrderDictionary[2] = TOC;
+        break;
     case OVERVIEW:
-      printingOrderDictionary[2] = OVERVIEW;
+      printingOrderDictionary[3] = OVERVIEW;
       break;
     case CHAPTERS:
-      printingOrderDictionary[3] = CHAPTERS;
+      printingOrderDictionary[4] = CHAPTERS;
       break;
     case APPENDICES:
-      printingOrderDictionary[4] = APPENDICES;
+      printingOrderDictionary[5] = APPENDICES;
       break;
     case ABOUT:
-      printingOrderDictionary[5] = ABOUT;
+      printingOrderDictionary[6] = ABOUT;
       break;
     default: break;
   }

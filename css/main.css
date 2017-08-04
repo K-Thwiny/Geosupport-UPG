@@ -221,6 +221,7 @@ img[alt^="GoatFunction_medium"] {
   margin: 10px, 10px, 10px, 10px;
 }
 
+
 .preInline {
   display: inline !important;
 }
@@ -247,6 +248,9 @@ img[alt^="GoatFunction_medium"] {
 
 .indentRows {
   padding-left: 40px !important;
+}
+.indentRowsofRows {
+  padding-left: 60px !important;
 }
 .centerRow {
   text-align: center;
@@ -290,7 +294,6 @@ img[alt^="GoatFunction_medium"] {
   font-size: 0.4cm !important;
 }
 
-
 .topBreak {
   margin-top: 15em;
 }
@@ -316,12 +319,44 @@ img[alt^="GoatFunction_medium"] {
 .sticky {
   margin-top: 0 !important;
   position: fixed;
+  text-align: center;
   top: 0;
   z-index: 10000;
   border-radius: 0 0 0.5em 0.5em;
-  background-color: rgba(240, 240, 240, 0.8);
+  background-color: rgba(240, 240, 240, 240);
   padding: 5px;
 }
 .btnBack {
   background-color: white;
+}
+.toctable tr td:nth-child(2){
+  display: none;
+  visibility: hidden;
+  }
+
+/* Print changes */
+@media print {
+  .section {
+    position: absolute;
+  }
+  img {
+    width: 80%;
+    float: left;
+  }
+  img[alt^="Gbat_Logo"] {
+    width: 10% !important;
+  }
+  img[alt^="Goat_Logo"] {
+    width: 10% !important;
+  }
+  .printBtn {
+    visibility: hidden;
+  }
+  .toctable {
+    width: 85% !important;
+  }
+.toctable tr td:nth-child(2){
+  display: block;
+  visibility: visible;
+  }
 }
